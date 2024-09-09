@@ -1,17 +1,4 @@
-import { useRouter } from 'next/router';
-
 export default function Navbar() {
-  const router = useRouter();
-
-  // Function to handle logo click
-  const handleLogoClick = () => {
-    router.push('/');
-  };
-
-  const handleLaunchAppClick = () => {
-    window.open('https://app.pypeai.com/', '_blank'); 
-  };
-
   return (
     <>
       <nav className="flex flex-wrap justify-between items-center p-4 bg-white">
@@ -20,7 +7,7 @@ export default function Navbar() {
             src="https://framerusercontent.com/assets/iYyVKiqcjdg66d3kzlH8OxOAgJM.png"
             alt="Logo"
             className="w-16 cursor-pointer h-8 md:w-20 md:h-10 rounded-full"
-            onClick={handleLogoClick}
+        
           />
           <p className="text-lg md:text-xl font-semibold text-gray-700">
             Pype AI
@@ -33,12 +20,10 @@ export default function Navbar() {
           >
             Features
           </a>
-          <button
-            onClick={handleLaunchAppClick}
-            className="bg-black w-20 md:w-24 rounded-md text-white text-xs py-2"
-          >
+          <button  className="bg-black w-20 md:w-24 rounded-md text-white text-xs py-2">
             Launch App
           </button>
+          
         </div>
       </nav>
       <hr className="border-t border-gray-300" />
