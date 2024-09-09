@@ -1,5 +1,5 @@
 import Features from './Components/Features'
-import Footer from './Footer';
+import Footer from './Components/Footer';
 import Landing from './Components/Landing';
 import Navbar from './Components/Navbar';
 
