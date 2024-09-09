@@ -1,10 +1,10 @@
 import { BiSun, BiMoon } from 'react-icons/bi';
 
-type NavbarProps = {
-  toggleDarkMode: () => void;
-};
-
-export default function Navbar({ toggleDarkMode }: NavbarProps) {
+interface NavbarProps {
+    toggleDarkMode: () => void;
+  }
+  
+  const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode }) => {
   return (
     <>
       <nav className="flex flex-wrap justify-between items-center p-4 bg-white dark:bg-gray-900">
@@ -41,3 +41,5 @@ export default function Navbar({ toggleDarkMode }: NavbarProps) {
     </>
   );
 }
+
+export default Navbar;
