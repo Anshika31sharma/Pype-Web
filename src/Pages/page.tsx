@@ -1,7 +1,7 @@
-import Features from './Features';
-import Footer from './Footer';
-import Landing from './Landing';
-import Navbar from './Navbar';
+import Features from '../app/Components/Features';
+import Footer from '../app/Components/Footer';
+import Landing from '../app/Components/Landing';
+import Navbar from '../app/Components/Navbar';
 
 const Home = () => {
   const toggleDarkMode = () => {
