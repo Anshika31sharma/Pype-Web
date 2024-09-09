@@ -1,7 +1,6 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Script from 'next/script';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,31 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
-        <Script
-          id="theme-toggle-script"
-          strategy="afterInteractive"
-        >
-          
-          {`
-            document.addEventListener('DOMContentLoaded', () => {
-              const toggleButton = document.querySelector('.theme-toggle-btn');
-              const storedTheme = localStorage.getItem('theme');
-              if (storedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-              } else {
-                document.body.classList.remove('dark-mode');
-              }
-              if (toggleButton) {
-                toggleButton.addEventListener('click', () => {
-                  const isDarkMode = document.body.classList.toggle('dark-mode');
-                  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-                });
-              }
-            });
-          `}
-        </Script>
       </body>
     </html>
   );

@@ -19,33 +19,3 @@
 .features {
   scroll-behavior: smooth;
 }
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #1a73e8;
-}
-.dark-mode {
-  --background-color: #121212;
-  --text-color: #e0e0e0;
-  --link-color: #bb86fc;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-}
-
-.theme-toggle-btn {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-.theme-toggle-btn:hover {
-  background-color: #e0e0e0;
-}
